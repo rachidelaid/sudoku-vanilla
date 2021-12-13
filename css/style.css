@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+  border: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-js-sr {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-ln-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  height: 100vh;
+  background-color: #1f1f1f;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.difficulty {
+  margin: 14px 0;
+}
+
+.difficulty > div {
+  margin: 0 14px;
+  cursor: pointer;
+}
+
+.difficulty .active {
+  border-bottom: 4px #000 solid;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[9];
+      grid-template-columns: repeat(9, 1fr);
+}
+
+.board > div {
+  border: 2px solid #000;
+  width: 50px;
+  height: 50px;
+}
+
+.board > .empty {
+  cursor: pointer;
+}
+
+.board > .mine {
+  color: #53dd53;
+}
+
+.options {
+  background-color: rgba(0, 0, 0, 0.418);
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+.options .content {
+  gap: 20px;
+  padding: 20px;
+  background-color: #000;
+}
+
+.options .content p {
+  cursor: pointer;
+}
+
+.options .content p:hover {
+  color: #53dd53;
+}
+
+button {
+  background-color: #000;
+  color: white;
+  padding: 16px;
+  margin: 16px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+/*# sourceMappingURL=style.css.map */
